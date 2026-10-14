@@ -1,0 +1,145 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  min-height: 420px;
+  padding: 32px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  text-align: left;
+  color: var(--text-h);
+  background: var(--accent-bg);
+  border-bottom: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    min-height: 300px;
+    padding: 24px 20px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Imagem hero: preenche o Banner ao fundo, atrás do texto. */
+.banner-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Título e subtítulo ficam acima da imagem, no mesmo contêiner (Req. 2.7). */
+.banner-title,
+.banner-subtitle {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.banner-title {
+  font-family: var(--heading);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -1.2px;
+  color: #fff;
+
+  @media (max-width: 1024px) {
+    font-size: 32px;
+  }
+}
+
+.banner-subtitle {
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Row (Carousel): fileira horizontal de Title_Cards com rótulo de seção.
+--------------------------------------------------------------------------- */
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 32px 32px;
+  text-align: left;
+
+  @media (max-width: 1024px) {
+    padding: 0 20px 24px;
+  }
+}
+
+/* Rótulo da seção (Req. 4.4). */
+.row-label {
+  margin: 0;
+  font-family: var(--heading);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  color: var(--text-h);
+}
+
+/* Faixa horizontal: dispõe os Title_Cards lado a lado, da esquerda para a
+   direita, em uma única linha visível, com rolagem horizontal (Req. 5.5). */
+.row-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+}
+
+/* ---------------------------------------------------------------------------
+   Title_Card: cartão de "pôster" de um único Streaming_Title.
+   Borda, cor de fundo e espaçamento observáveis (Req. 5.4, 5.6).
+--------------------------------------------------------------------------- */
+.title-card {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  background: var(--accent-bg);
+  box-shadow: var(--shadow);
+  scroll-snap-align: start;
+
+  @media (max-width: 1024px) {
+    flex-basis: 200px;
+  }
+}
+
+.title-card-name {
+  margin: 0;
+  font-family: var(--heading);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-h);
+}
+
+.title-card-year {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.title-card-description {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--text);
+}
