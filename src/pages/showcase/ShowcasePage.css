@@ -143,3 +143,50 @@
   line-height: 1.4;
   color: var(--text);
 }
+
+.title-card-new {
+  align-self: flex-start;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.title-card-availability {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.title-card-description-fallback {
+  color: var(--text);
+  font-style: italic;
+}
+
+
+/* Badge — cápsula compacta que exibe um rótulo curto (return null quando
+   vazio). Borda e fundo de destaque, texto de alto contraste. */
+.badge {
+  align-self: flex-start;
+  padding: 2px 10px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-h);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+}
+
+.row-empty {
+  margin: 0;
+  padding: 24px;
+  text-align: center;
+  font-style: italic;
+  color: var(--text);
+}
+
+

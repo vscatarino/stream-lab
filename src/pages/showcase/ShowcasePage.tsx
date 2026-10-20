@@ -17,9 +17,14 @@ export default function ShowcasePage() {
         titleCardProps={{
           title: "Matrix",
           year: "1999",
-          description: "O programador Thomas Anderson, conhecido como o hacker Neo (Keanu Reeves), descobre que a realidade é uma simulação de computador criada por máquinas para controlar a humanidade."
+          description: "Thomas Anderson descobre que a realidade é uma simulação...",
+          available: true,
+          isNew: true,
+          badgeLabel: "Ficção científica"
         }}
       />
+
+      <Row label="Lançamentos da semana" />
     </BannerLayout >
 
   )
