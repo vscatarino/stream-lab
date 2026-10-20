@@ -13,7 +13,7 @@ export default function ShowcasePage() {
     { id: "blade-1982", title: "Blade Runner", year: "1982", description: "Um caçador de replicantes questiona a própria humanidade.", available: false, badgeLabel: "Clássico" },
   ];
 
-  const avaiables = CATALOG.filter((t) => t.available === true);
+  const availables = CATALOG.filter((t) => t.available === true);
 
   const emptyList = CATALOG.filter((t) => t.year === "3000");
   return (
@@ -28,7 +28,7 @@ export default function ShowcasePage() {
 
       <Row label="Catálogo completo" titles={CATALOG} />
 
-      <Row label="Disponíveis agora" titles={avaiables} />
+      <Row label="Disponíveis agora" titles={availables} />
 
       <Row label="Em breve na sua região" titles={emptyList} />
     </BannerLayout >
